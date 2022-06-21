@@ -74,7 +74,7 @@ const compareNums = (num1, num2) => {
     return `not a number`
   }
 }
-compareNums(3,25);
+// console.log(compareNums(3,25));
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -104,7 +104,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+//                            console.log('expression')
 
 
 
@@ -119,7 +119,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+//                      console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -130,7 +130,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = str => console.log(str.toUpperCase() + '!!!');
+// exclaimThree('arrow');
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -144,7 +145,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+      //            console.log('declaration')
 // console.log('expression')
 
 
@@ -157,8 +158,17 @@ function exclaimFour(str) {
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
-
+function nameCheck(person1){
+  if (person1 === `Steven`){
+    return `What is up Steven`
+  }else if (person1 === `Bryan`){
+    return `Hey Bryan!`
+  }else {
+    return `Cool name, ${person1}`
+  }
+}
+let nameGreeting = nameCheck(`Dallas`)
+// console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -170,8 +180,19 @@ function exclaimFour(str) {
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
-
+function faveColorFinder(color){
+  if(color === `red`){
+    return `red is a great color`
+  }else if(color === `green`){
+    return `green is a solid favorite color`
+  }else if(color === `black`){
+    return `so trendy`
+  }else{
+    return `you need to evaluate your favorite color choice`
+  }
+}
+let colorRating = faveColorFinder(`blue`);
+// console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -181,8 +202,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
-
+function printAllNames(anything){
+  for (let i = 0; i < anything.length; i++){
+    console.log(anything[i])
+  }
+}
+// printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -192,8 +217,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
-
+function thatsOdd(num1){
+  if ((num1 % 2)===0){
+    return `That's not odd!`
+  }else{
+    return `That is odd indeed`
+  }
+}
+// console.log(thatsOdd(3))
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -205,8 +236,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
-
+const bestMovie = (movieParam) => {return`${movieParam} is the best movie ever!`}
+// bestMovie(`Ready Player One`)
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -219,8 +250,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
-//CODE HERE
-
+function bigOrSmall(arr){
+  let answers = []
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i]>100){
+      answers.push(`big`);
+    }else if (arr[i] <= 100){
+      answers.push(`small`);
+    }
+  }
+  let arrayEvaluator = answers
+  return arrayEvaluator;
+}
+console.log(bigOrSmall(bigOrSmallArray))
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
